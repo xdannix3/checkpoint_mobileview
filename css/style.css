@@ -1,0 +1,298 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:120%;
+	font-family: 'Amiri';
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+
+.active a{
+	text-decoration: none;;
+}
+
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+}
+
+
+/*header*/
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #B7A3BF;
+	background:url('../images/headerbackground.jpg');
+	background-size: cover;
+}
+
+header, main,footer{
+	border: 2px solid grey;
+	margin: 10px 0;
+}
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+}
+
+nav li{
+	padding:10px;
+	margin: 10px;
+	display: inline-block;
+}
+
+nav .active{
+	background-color:#d4c1db;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 3px solid #B7A3BF;
+	
+}
+
+/*Style the images*/
+img{
+    height: 200px;
+    width:auto;
+    border: 2px solid #BDB5D5;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+img:hover{
+	filter: grayscale();
+	border:dashed;
+
+}
+
+footer{
+	background:url('../images/headerbackground.jpg');
+	background-size: cover;
+	text-align: center;
+}
+
+
+
+
+
+/* From Style page*/
+  
+  legend{ 
+	/*font-size: 125%;*/
+	/*font-style:italic;*/
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10px;
+  }
+  
+  label{
+	display: inline-block;
+	margin-right:10px;
+	width:15%;
+  }
+  input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+ 
+  textarea{
+	width: 100%;
+	height: 35vh;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+  
+  
+  input[type=checkbox]{
+	  display:inline;
+	  width:inherit;
+  }
+  
+  
+  input[type=submit]:hover {
+	opacity: 0.8;
+  }
+  
+  
+  input[type=submit] {
+	/*background:url('../images/headerbackground.jpg');
+	background-size: cover;*/
+	background-color:#d4c1db;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  }
+
+  /*style for scenery page*/
+.michelin-gallery {
+    display: grid;
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(1, 1fr);
+    grid-gap:20px;
+    justify-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 0px #0000001c;
+
+}
+
+.gallery-item .image-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    /*overflow: scroll;*/
+}
+
+.gallery-item .image-container img {
+   /* width: 100%;
+    height:100%;*/
+	width: 80%;
+    height:80%;
+    object-fit: cover;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.gallery-item a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.gallery-item a:hover{
+    text-decoration:none;
+	background-color:#d4c1db;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 3px solid #B7A3BF;
+}
+
+/*logo*/
+#logo {
+	height: 80px;
+	width: auto;
+	border: none;
+	margin:0px;
+	padding-bottom: 0px;
+	animation: mymove 5s;
+  }
+
+
+@keyframes mymove {
+	from {width: 25px;
+	  opacity:0;}
+  to {width: 100px;
+	  opacity:1;}
+  }
+
+/*responsive design*/
+
+@media screen and (min-width: 550px){
+	.michelin-gallery {
+		display: grid;
+		grid-template-rows: repeat(5, 1fr);
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 16px;
+		justify-items: center;
+		align-items: center;
+	}
+}
+
+  /* Change styles for span and cancel button on extra small screens */
+@media screen and (min-width: 770px) {
+	form{
+	  width: 80%;
+	  margin: 0 auto;
+	}
+  
+	input{
+	  width:80%;
+	}
+  
+	textarea{
+	  width:80%;
+	  height: 25vh;
+   }
+   
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+
+   .michelin-gallery {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 16px;
+	justify-items: center;
+	align-items: center;
+}
+  }
+
+  
+@media screen and (min-width: 900px){
+	header{
+		display: flex;
+		flex-direction: row;
+		justify-content:space-evenly;
+		align-items: center;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		}
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+	#logo{
+	  animation: none;
+	}
+  }
+  
